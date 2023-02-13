@@ -1,4 +1,4 @@
 package com.dhai.education.service;
 
-public class StudentService {
+public interface StudentService {
 }

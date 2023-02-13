@@ -20,10 +20,10 @@ public class Mark {
     @NotNull
     @Range(min = 0, max = 10)
     private float score;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "exam_id")
     private Exam exam;
 }

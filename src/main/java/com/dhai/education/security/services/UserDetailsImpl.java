@@ -1,4 +1,4 @@
-package com.dhai.education.util;
+package com.dhai.education.security.services;
 
 import com.dhai.education.entity.User;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserPrincipal implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
     private User user;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

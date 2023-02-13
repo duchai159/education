@@ -24,7 +24,7 @@ public class Course {
     private Date end;
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
     private Collection<Exam> exams;
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "user_course",
             joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "course_id"),
